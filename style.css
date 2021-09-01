@@ -1,5 +1,6 @@
-.background{
-    background-color: blueviolet;
+.background
+{
+   background-image:url("library.jpeg");
 }
 .textcol{
     color: cornsilk;
