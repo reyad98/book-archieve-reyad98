@@ -63,7 +63,7 @@ const searchFood = () => {
         <div class="card-body">
           <h4 class="card-title">Title: ${book.title}</h4>
           <h5 class="card-title">Author: ${book.author_name}</h5>
-          <h6 class="card-title">Publisher: ${book.publisher}</h6>
+          <h6 class="card-title">Publisher: ${book.publisher[0]}</h6>
           <p class="card-text">Published Date: ${book.first_publish_year}</p>
           
         </div>
