@@ -2,17 +2,17 @@
 const searchBook = () => {
   const searchField = document.getElementById('search-field');
   const searchText = searchField.value;
-  console.log(searchText);
+  //console.log(searchText);
   searchField.value = '';
 
   const url = ` https://openlibrary.org/search.json?q=${searchText}
     `;
-//  for find all search result
+  //  for find all search result
   fetch(url)
     .then(res => res.json())
     .then(data => displayFound(data.numFound));
 
-//  for  show some book result   
+  //  for  show some book result   
   fetch(url)
     .then(res => res.json())
     .then(data => displaySearchResult(data.docs))
@@ -41,15 +41,16 @@ const displayFound = total => {
       `;
     result.appendChild(div);
   }
-  
+
 }
 
 // arrow function for display some book result
+
 const displaySearchResult = books => {
   const searchResult = document.getElementById('search-result');
 
   searchResult.textContent = '';
-  
+
   books.forEach(book => {
     //const pp =book.numFound;
     const div = document.createElement('div');
